@@ -34,11 +34,21 @@ public class Config {
 	private static Configuration config;
 	
 	private Config(String propertiesFilePath){
-		try {
-			config = new PropertiesConfiguration(propertiesFilePath);
-		} catch (ConfigurationException e) {
-			logger.error("Error while reading the configuration file", e);
-		}
+//		try {
+//			config = new PropertiesConfiguration(propertiesFilePath);
+			// fix because of maven compiler getting crazy and not correctly importing setup.properties
+			config = new PropertiesConfiguration();
+			config.setProperty("rsp_server.static_resources.path", "/path/to/nothing");
+			config.setProperty("csparql_server.port", "8175");
+			config.setProperty("csparql_server.version", "0.4.4");
+			config.setProperty("csparql_server.host_name", "http://www.modaclouds.eu/");
+			config.setProperty("csparql_engine.enable_timestamp_function", "true");
+			config.setProperty("csparql_engine.send_empty_results", "false");
+			config.setProperty("csparql_engine.activate_inference", "true");
+			config.setProperty("csparql_engine.inference_rule_file", "inference.rules");
+//		} catch (ConfigurationException e) {
+//			logger.error("Error while reading the configuration file", e);
+//		}
 	}
 	
 	public static void initialize(String propertiesFilePath){

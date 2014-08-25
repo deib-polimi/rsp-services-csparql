@@ -24,6 +24,7 @@ import java.io.File;
 import java.net.URL;
 import java.util.Hashtable;
 
+import org.apache.commons.configuration.PropertiesConfiguration;
 import org.apache.log4j.PropertyConfigurator;
 import org.restlet.Application;
 import org.restlet.Component;
