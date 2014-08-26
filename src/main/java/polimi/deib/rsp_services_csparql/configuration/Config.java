@@ -44,7 +44,7 @@ public class Config {
 			config.setProperty("csparql_server.host_name", "http://www.modaclouds.eu/");
 			config.setProperty("csparql_engine.enable_timestamp_function", "true");
 			config.setProperty("csparql_engine.send_empty_results", "false");
-			config.setProperty("csparql_engine.activate_inference", "true");
+			config.setProperty("csparql_engine.activate_inference", "false");
 			config.setProperty("csparql_engine.inference_rule_file", "inference.rules");
 //		} catch (ConfigurationException e) {
 //			logger.error("Error while reading the configuration file", e);
