@@ -1,2 +1,4 @@
-[idProperty: (?s1 http://www.modaclouds.eu/rdfs/1.0/entities#id ?id1), (?s1 ?p ?id2), (?s2 http://www.modaclouds.eu/rdfs/1.0/entities#id ?id2) -> (?s1 ?p ?s2)]
-[idPropertySet: (?s1 ?p ?set), (?set http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag), (?set ?li ?id2), (?s2 http://www.modaclouds.eu/rdfs/1.0/entities#id ?id2) -> (?s1 ?p ?s2)]
+@prefix rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+@prefix modaent: http://www.modaclouds.eu/rdfs/1.0/entities#
+[idProperty: (?s1 modaent:id ?id1), (?s1 ?p ?id2), (?s2 modaent:id ?id2) -> (?s1 ?p ?s2)]
+[idPropertySet: (?s1 modaent:id ?id1), (?s1 ?p ?set), (?set rdf:type rdf:Bag), (?set ?li ?id2), (?s2 modaent:id ?id2) -> (?s1 ?p ?s2)]
