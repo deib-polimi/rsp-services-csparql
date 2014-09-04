@@ -1,19 +1,18 @@
-rsp-service-csparql
+The MODAClouds Deterministic Data Analyzer (rsp-services-csparql)
 ===========
 
-Implementatons of rsp-services interfaces for C-SPARQL Engine
-This project implements rsp-services components, go to https://github.com/streamreasoning/rsp-services to have more informations
+In the context of MODAClouds European project (www.modaclouds.eu), Politecnico was
+one of the partners involved in the development of the QoS Analysis and Monitoring Tools.
 
-Implementations
-------------
+The Deterministic Data Analyzer (DDA) is the component responsible of aggregating, analyzing and verifying
+conditions on monitoring data.
 
-The package polimi.deib.rsp_services_csparql.commons contains the implementation of the rsp-services interfaces
-The rest of the packages follow the server schemata to expose Rest services
+The original project (rsp-services-csparql) is available at [this link](https://github.com/streamreasoning/rsp-services-csparql),
+this is just a fork of the original repository with a simple customization in the configuration and inference rules that are required
+by the MODAClouds Monitoring Platform.
 
-Online Resources
-------------
+Please refer to deliverable [D6.3.2](http://www.modaclouds.eu/publications/public-deliverables/) 
+to better understand the role of this component in the MODAClouds Monitoring Platform.
 
-You can find well documented hands on example at https://www.dropbox.com/s/ghb6ergnd0ric1u/ISWC2013_Hands_on_CSPARQL.zip and related slide at http://streamreasoning.org/slides/2013/10/B3_Hands_On_Session.pdf
-
-An example of java client for rsp-service-csparql at https://github.com/streamreasoning/rsp-services-client-example. The client project uses a custom API, you can found the code at https://github.com/streamreasoning/rsp-services-api.
+Refer to the [Monitoring Platform Wiki](https://github.com/deib-polimi/modaclouds-monitoring-manager/wiki) for installation and usage of the whole platform.
 
