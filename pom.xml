@@ -11,7 +11,7 @@
 
 	<groupId>polimi.deib</groupId>
 	<artifactId>rsp-services-csparql</artifactId>
-	<version>0.4.5-modaclouds</version>
+	<version>0.4.6-modaclouds</version>
 	<packaging>jar</packaging>
 
 	<name>rsp-services-csparql</name>
@@ -61,6 +61,12 @@
 			<artifactId>csparql-core</artifactId>
 			<version>0.9.4</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.6</version>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
@@ -94,11 +100,6 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>1.7.5</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.5</version>
 		</dependency>
 		<dependency>
