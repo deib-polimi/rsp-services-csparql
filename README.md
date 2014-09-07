@@ -17,6 +17,11 @@ Refer to the [Monitoring Platform Wiki](https://github.com/deib-polimi/modacloud
 
 # Installation
 
+Requirements:
+* Java 7 JDK
+* Apache Maven 3+
+* git
+
 ```
 git clone https://github.com/deib-polimi/rsp-services-csparql.git
 cd rsp-services-csparql
