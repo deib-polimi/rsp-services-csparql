@@ -39,7 +39,7 @@ public class Config {
 			// fix because of maven compiler getting crazy and not correctly importing setup.properties
 			config = new PropertiesConfiguration();
 			config.setProperty("rsp_server.static_resources.path", "/path/to/nothing");
-			config.setProperty("csparql_server.port", "8175");
+			config.setProperty("csparql_server.port", System.getProperty("csparql_server.port"));
 			config.setProperty("csparql_server.version", "0.4.4");
 			config.setProperty("csparql_server.host_name", "http://www.modaclouds.eu/");
 			config.setProperty("csparql_engine.enable_timestamp_function", "true");

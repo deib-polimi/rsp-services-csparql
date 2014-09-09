@@ -15,3 +15,9 @@ to better understand the role of this component in the MODAClouds Monitoring Pla
 
 Refer to the [Monitoring Platform Wiki](https://github.com/deib-polimi/modaclouds-monitoring-manager/wiki) for installation and usage of the whole platform.
 
+## Change List
+
+0.4.6.1-modaclouds:
+
+* port can be specified as parameter (deafault is 8175): java -jar rsp-services-csparql [port]
+* package is now built with dependencies by default when compiling: mvn package

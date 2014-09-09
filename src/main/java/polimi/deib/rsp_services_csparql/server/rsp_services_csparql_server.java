@@ -64,20 +64,11 @@ public class rsp_services_csparql_server extends Application{
 
 	public static void main(String[] args) throws Exception{
 
-//		try{
-//			PropertyConfigurator.configure(new URL("http://streamreasoning.org/configuration_files/rspCsparql/log4j.properties"));
-//		} catch(Exception e){
-//			PropertyConfigurator.configure("propertiesFiles/log4j.properties");
-//		}
-//		
-//		PropertyConfigurator.configure("log4j.properties");
-
-//		if(args.length > 0){
-//			propertiesFilePath = args[0];
-//		} else {
-//			propertiesFilePath = "http://streamreasoning.org/configuration_files/rspCsparql/setup.properties";
-//		}
-		// Marco M:
+		if(args.length > 0){
+			System.setProperty("csparql_server.port", args[0]);
+		} else {
+			System.setProperty("csparql_server.port", "8175");
+		}
 		propertiesFilePath = "setup.properties";
 
 		Config.initialize(propertiesFilePath);
