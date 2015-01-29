@@ -17,23 +17,22 @@ Refer to the [Monitoring Platform Wiki](https://github.com/deib-polimi/modacloud
 
 ## Change List
 
+0.4.6.2-modaclouds:
+* packaged together with executable
+* package assembly automated
+
 0.4.6.1-modaclouds:
 
 * port can be specified as parameter (deafault is 8175): java -jar rsp-services-csparql [port]
 * package is now built with dependencies by default when compiling: mvn package
 
-## Installation
+## Usage
 
 Requirements:
+* JRE 7
 
-* Java 7 JDK
-* Apache Maven 3+
-* git
+Run:
+```bash
+./rsp-services-csparql [port]
+```
 
-```
-git clone https://github.com/deib-polimi/rsp-services-csparql.git
-cd rsp-services-csparql
-git checkout tags/0.4.6.1-modaclouds
-mvn package
-cd ..
-```

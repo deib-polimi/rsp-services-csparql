@@ -11,7 +11,7 @@
 
 	<groupId>polimi.deib</groupId>
 	<artifactId>rsp-services-csparql</artifactId>
-	<version>0.4.6.1-modaclouds</version>
+	<version>0.4.6.2-modaclouds</version>
 	<packaging>jar</packaging>
 
 	<name>rsp-services-csparql</name>
@@ -61,7 +61,7 @@
 			<artifactId>csparql-core</artifactId>
 			<version>0.9.4</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
@@ -154,19 +154,29 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<transformers>
+						<transformer
+							implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+							<mainClass>polimi.deib.rsp_services_csparql.server.rsp_services_csparql_server</mainClass>
+						</transformer>
+					</transformers>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>2.4.1</version>
-				<configuration>
-					<archive>
-						<manifest>
-							<mainClass>polimi.deib.rsp_services_csparql.server.rsp_services_csparql_server</mainClass>
-						</manifest>
-					</archive>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
-					<appendAssemblyId>false</appendAssemblyId>
-				</configuration>
 				<executions>
 					<execution>
 						<id>make-assembly</id> <!-- this is used for inheritance merges -->
@@ -174,6 +184,11 @@
 						<goals>
 							<goal>single</goal>
 						</goals>
+						<configuration>
+							<descriptors>
+								<descriptor>assembly-dist.xml</descriptor>
+							</descriptors>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
