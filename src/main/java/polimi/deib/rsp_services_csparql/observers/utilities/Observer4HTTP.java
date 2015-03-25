@@ -119,9 +119,9 @@ public class Observer4HTTP implements Continuous_Query_Observer_Interface{
 
 		try {
 
-			if(sendEmptyResults){
-								
-				if(!q.getJsonSerialization().isEmpty()){
+			if (!sendEmptyResults) {
+				
+				if (!isEmptyResult(q.getJsonSerialization())) {
 					
 					method.setEntity(new StringEntity(q.getJsonSerialization()));
 
@@ -151,5 +151,9 @@ public class Observer4HTTP implements Continuous_Query_Observer_Interface{
 		} finally {
 			method.releaseConnection();
 		}		
+	}
+
+	private boolean isEmptyResult(String json) {
+		return json.matches("\\{\\s*\\}");
 	}
 }
