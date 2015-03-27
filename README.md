@@ -17,6 +17,9 @@ Refer to the [Monitoring Platform Wiki](https://github.com/deib-polimi/modacloud
 
 ## Change List
 
+0.4.6.3-modaclouds:
+* fixed problem that caused to send empty results even when configured not to do it
+
 0.4.6.2-modaclouds:
 * packaged together with executable
 * package assembly automated
