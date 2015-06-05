@@ -1,5 +1,8 @@
-The MODAClouds Deterministic Data Analyzer (rsp-services-csparql)
+~~The MODAClouds Deterministic Data Analyzer (rsp-services-csparql)~~
 ===========
+
+> The monitoring deterministic data analyzer was migrated and included in the new [Tower 4Clouds Repository](https://github.com/deib-polimi/tower4clouds)
+------
 
 In the context of MODAClouds European project (www.modaclouds.eu), Politecnico was
 one of the partners involved in the development of the QoS Analysis and Monitoring Tools.
